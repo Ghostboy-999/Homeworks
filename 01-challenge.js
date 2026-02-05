@@ -1,4 +1,4 @@
-// Funcion regular
+/* Funcion regular
 
 function multi (a,b){ 
 
@@ -7,3 +7,12 @@ function multi (a,b){
 }
 
 console.log(multi(6,4));
+
+
+funcion flecha
+
+const multi = (a,b) => a * b;
+
+console.log(multi(6,4));
+
+*/
