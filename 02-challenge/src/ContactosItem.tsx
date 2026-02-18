@@ -1,4 +1,4 @@
-interface Contacto {
+interface Contactos {
 
   id: number;
   nombre: string;
@@ -6,14 +6,14 @@ interface Contacto {
 
 }
 
-interface ContactoItemProps {
+interface ContactosItemProps {
 
-  contacto: Contacto;
+  contacto: Contactos;
   onEliminar: (id: number) => void;
 
 }
 
-function ContactoItem({ contacto, onEliminar }: ContactoItemProps) {
+function ContactosItem({ contacto, onEliminar }: ContactosItemProps) {
 
   return (
     <div className="contacto-item">
@@ -35,7 +35,7 @@ function ContactoItem({ contacto, onEliminar }: ContactoItemProps) {
     </div>
 
   );
-  
+
 }
 
-export default ContactoItem;
+export default ContactosItem;
