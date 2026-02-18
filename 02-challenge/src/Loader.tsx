@@ -27,7 +27,7 @@ function loadingLogo(){
         <div>
 
             {load && <p>Cargando pagina.....</p>}
-            <img src= "https://tenor.com/es/view/loading-gif-6449096453315144907"
+            <img src= "https://i.gifer.com/ZKZg.gif"
             alt= "Imagen carga"></img>
 
         </div>
