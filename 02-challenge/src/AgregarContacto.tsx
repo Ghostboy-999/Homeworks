@@ -31,13 +31,13 @@ function AgregarContacto({ onAgregar }: AgregarContactoProps) {
 
       margin: '20px 0',
       padding: '20px',
-      border: '1px solid #ddd',
+      border: '1px solid #fff8f8',
       borderRadius: '8px',
-      backgroundColor: '#f9f9f9'
+      backgroundColor: '#353535'
 
     }}>
 
-      <h3 style={{ marginTop: 0 }}>Agregar Nuevo Contacto</h3>
+      <h3 style={{ marginTop: 0 }}> Agregar Nuevo Contacto</h3>
 
       <input
         type="text"

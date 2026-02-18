@@ -11,7 +11,7 @@ function loadingLogo(){
 
                 setTiempo(intervalo-1);
 
-            }, 1000);
+            }, 10000);
         
             return() => clearTimeout(intervalo);
         } else{
