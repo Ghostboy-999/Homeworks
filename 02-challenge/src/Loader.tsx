@@ -4,7 +4,6 @@ function loadingLogo(){
 
     const [load,setLoad] = useState!(true);
     const [tiempo,setTiempo] = useState!(10);
-
     useEffect!(() => {
 
         if(tiempo > 0){
