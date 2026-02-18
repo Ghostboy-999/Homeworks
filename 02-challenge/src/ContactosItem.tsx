@@ -42,11 +42,16 @@ function ContactosItem({ contacto, onEliminar }: ContactosItemProps) {
         }}>
 
           {contacto.nombre}
+
         </strong>
+
         <p style={{ margin: 0, color: '#666' }}>
+
           {contacto.telefono}
         </p>
+
       </div>
+
       <button 
         onClick={() => onEliminar(contacto.id)}
         style={{
@@ -56,12 +61,18 @@ function ContactosItem({ contacto, onEliminar }: ContactosItemProps) {
           padding: '8px 15px',
           borderRadius: '5px',
           cursor: 'pointer'
+
         }}
+
       >
         Eliminar
+
       </button>
+
     </div>
+
   );
+
 }
 
 export default ContactosItem;
