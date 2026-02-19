@@ -9,6 +9,6 @@ export default class Cancion{
 
         this.value = value
         this.next = null;
-        
+
     }
 }
