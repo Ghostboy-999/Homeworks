@@ -24,7 +24,7 @@ class LinkedList{
             
         
         } else{
-            this.tail.next = newCancion;
+            this.tail!.next = newCancion;
         }
 
         this.tail = newCancion;
