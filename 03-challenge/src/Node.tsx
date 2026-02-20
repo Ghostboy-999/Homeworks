@@ -1,7 +1,7 @@
 export default class Cancion{
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
     value: any;
-    next: Node | null;
+    next: Cancion | null;
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     constructor(value: any){
