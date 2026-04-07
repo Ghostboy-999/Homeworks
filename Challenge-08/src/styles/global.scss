@@ -1,0 +1,199 @@
+:root {
+  --app-bg: #070a13;
+  --app-card-bg: rgba(255, 255, 255, 0.06);
+  --app-card-bg-strong: rgba(255, 255, 255, 0.1);
+  --app-border: rgba(255, 255, 255, 0.14);
+  --app-text: rgba(255, 255, 255, 0.92);
+  --app-text-muted: rgba(255, 255, 255, 0.72);
+  --app-focus: rgba(124, 58, 237, 0.55);
+  --app-shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+}
+
+body {
+  background:
+    radial-gradient(1200px 700px at 18% -10%, rgba(124, 58, 237, 0.34), transparent 55%),
+    radial-gradient(1000px 650px at 92% 0%, rgba(14, 165, 233, 0.24), transparent 52%),
+    radial-gradient(900px 600px at 55% 110%, rgba(244, 63, 94, 0.14), transparent 55%),
+    var(--app-bg);
+  color: var(--app-text);
+  min-height: 100vh;
+}
+
+#root {
+  text-align: left;
+}
+
+.container-fluid {
+  max-width: 1040px;
+}
+
+.app-navbar {
+  border-bottom: 1px solid var(--app-border);
+  background: rgba(10, 12, 22, 0.55);
+  backdrop-filter: blur(14px);
+}
+
+.app-navbar__inner {
+  padding: 12px 0;
+}
+
+.app-navbar__brand {
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: -0.2px;
+}
+
+.app-navbar__email {
+  color: var(--app-text-muted);
+  font-size: 0.9rem;
+}
+
+.page {
+  padding: 28px 0 60px;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.page h2 {
+  letter-spacing: -0.4px;
+}
+
+.page .text-muted {
+  color: var(--app-text-muted) !important;
+}
+
+.app-card h1,
+.app-card h2,
+.app-card h3,
+.app-task-card h1,
+.app-task-card h2,
+.app-task-card h3 {
+  color: var(--app-text) !important;
+}
+
+.app-card .form-label,
+.app-task-card .form-label {
+  color: rgba(255, 255, 255, 0.92) !important;
+}
+
+.app-card .alert,
+.app-task-card .alert {
+  border-radius: 12px;
+}
+
+.app-card .text-muted,
+.app-task-card .text-muted {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.app-card a,
+.app-task-card a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.app-card a:hover,
+.app-task-card a:hover {
+  text-decoration: underline;
+}
+
+.app-auth {
+  min-height: calc(100vh - 64px);
+  display: grid;
+  place-items: center;
+  padding: 34px 16px 60px;
+}
+
+.app-auth__card {
+  width: 100%;
+  max-width: 420px;
+}
+
+.app-card,
+.app-task-card {
+  background: var(--app-card-bg);
+  border: 1px solid var(--app-border);
+  border-radius: 16px;
+  box-shadow: var(--app-shadow);
+  backdrop-filter: blur(16px);
+}
+
+.app-card .card-body,
+.app-task-card .card-body {
+  padding: 18px;
+}
+
+.app-card .card-body {
+  padding: 22px;
+}
+
+.app-input {
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  color: rgba(255, 255, 255, 0.96) !important;
+  caret-color: rgba(255, 255, 255, 0.95);
+}
+
+.app-input::placeholder {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.app-input:focus {
+  background: var(--app-card-bg-strong);
+  border-color: var(--app-focus);
+  box-shadow: 0 0 0 0.25rem rgba(124, 58, 237, 0.25);
+}
+
+/* Chrome/Edge autofill (evita texto oscuro sobre fondo oscuro) */
+.app-input:-webkit-autofill,
+.app-input:-webkit-autofill:hover,
+.app-input:-webkit-autofill:focus,
+.app-input:-webkit-autofill:active {
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.96);
+  transition: background-color 9999s ease-in-out 0s;
+  box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0.10) inset;
+  caret-color: rgba(255, 255, 255, 0.95);
+}
+
+.app-form label {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #7c3aed, #2563eb);
+  border: none;
+}
+
+.btn-success {
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+  border: none;
+}
+
+.btn-outline-light {
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.btn-outline-light:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.form-check-input {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.form-check-input:checked {
+  background-color: #7c3aed;
+  border-color: #7c3aed;
+}
+
+a {
+  color: rgba(168, 130, 255, 0.95);
+}
+
+a:hover {
+  color: rgba(196, 181, 253, 1);
+}
+
