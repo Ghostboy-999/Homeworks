@@ -6,7 +6,12 @@ import type { Cancion } from '../types/cancion'
 type Props = {
 
   canciones: Cancion[]
-  onAgregarCancion: (titulo: string, artista: string) => void
+  onAgregarCancion: (
+    titulo: string,
+    artista: string,
+    reproducciones: number,
+    urlEscucha?: string
+  ) => void
 
 }
 
@@ -14,6 +19,8 @@ export function SeccionBuscador({ canciones, onAgregarCancion }: Props) {
 
   const [titulo, setTitulo] = useState('')
   const [artista, setArtista] = useState('')
+  const [reproducciones, setReproducciones] = useState('')
+  const [urlEscucha, setUrlEscucha] = useState('')
   const [busqueda, setBusqueda] = useState('')
 
   const trie = useMemo(() => {
@@ -30,11 +37,16 @@ export function SeccionBuscador({ canciones, onAgregarCancion }: Props) {
   function manejarEnvio(evento: FormEvent) {
 
     evento.preventDefault()
-    if (!titulo.trim() || !artista.trim()) return
+    const totalReproducciones = Number(reproducciones)
 
-    onAgregarCancion(titulo, artista)
+    if (!titulo.trim() || !artista.trim()) return
+    if (!Number.isFinite(totalReproducciones) || totalReproducciones < 0) return
+
+    onAgregarCancion(titulo, artista, totalReproducciones, urlEscucha.trim() || undefined)
     setTitulo('')
     setArtista('')
+    setReproducciones('')
+    setUrlEscucha('')
 
   }
 
@@ -53,6 +65,19 @@ export function SeccionBuscador({ canciones, onAgregarCancion }: Props) {
           value={artista}
           onChange={(evento) => setArtista(evento.target.value)}
           placeholder="Artista"
+        />
+        <input
+          type="number"
+          min="0"
+          value={reproducciones}
+          onChange={(evento) => setReproducciones(evento.target.value)}
+          placeholder="Numero de reproducciones"
+        />
+        <input
+          type="url"
+          value={urlEscucha}
+          onChange={(evento) => setUrlEscucha(evento.target.value)}
+          placeholder="Link para escuchar la cancion"
         />
         <button>Insertar cancion</button>
       </form>
