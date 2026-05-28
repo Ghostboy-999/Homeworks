@@ -1,0 +1,160 @@
+$verde: #1db954;
+$negro: #121212;
+$gris: #f4f4f5;
+$borde: #d4d4d8;
+
+.app {
+  width: min(1200px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 32px 0;
+}
+
+.encabezado {
+  margin-bottom: 24px;
+
+  p {
+    margin: 0 0 8px;
+    color: $verde;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    margin: 0;
+    color: $negro;
+  }
+
+  span {
+    color: #52525b;
+  }
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  align-items: start;
+}
+
+.panel {
+  display: grid;
+  gap: 16px;
+  padding: 20px;
+  border: 1px solid $borde;
+  border-radius: 10px;
+  background: #ffffff;
+
+  h2 {
+    margin: 0;
+    color: $negro;
+  }
+}
+
+.formulario {
+  display: grid;
+  gap: 10px;
+}
+
+input,
+select,
+button {
+  width: 100%;
+  padding: 11px 12px;
+  border-radius: 8px;
+  font: inherit;
+}
+
+input,
+select {
+  border: 1px solid $borde;
+  background: #ffffff;
+  color: $negro;
+}
+
+button {
+  border: none;
+  background: $verde;
+  color: #ffffff;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.resultado,
+.ranking-item,
+.lista span,
+.relaciones small {
+  border-radius: 8px;
+  background: $gris;
+}
+
+.resultado {
+  padding: 12px;
+}
+
+.lista {
+  display: grid;
+  gap: 8px;
+
+  span {
+    padding: 10px 12px;
+  }
+}
+
+.ranking {
+  display: grid;
+  gap: 10px;
+}
+
+.ranking-item {
+  display: grid;
+  grid-template-columns: 42px 1fr auto auto;
+  gap: 12px;
+  align-items: center;
+  padding: 12px;
+
+  span {
+    color: $verde;
+    font-weight: 900;
+  }
+
+  p {
+    margin: 0;
+    color: #71717a;
+  }
+}
+
+.boton-escuchar {
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: $verde;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-align: center;
+  text-decoration: none;
+}
+
+.relaciones {
+  display: grid;
+  gap: 8px;
+
+  small {
+    padding: 8px 10px;
+    color: #52525b;
+  }
+}
+
+@media (max-width: 980px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .ranking-item {
+    grid-template-columns: 42px 1fr;
+  }
+
+  .ranking-item b,
+  .boton-escuchar {
+    grid-column: 2;
+  }
+}
